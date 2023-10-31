@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Promedio</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+</head>
+
+<body class="cuerpo">
+    <h1>Calculadora Promedio</h1> <br>
+    <div class="row" style="padding: 25px 50px 75px 100px;">
+        <div class="col">
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre" aria-label="Nombre">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="modulo" placeholder="Modulo" aria-label="Modulo">
+        </div>
+    </div>
+    <form action="index2.html" method="post">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <table class="table table-dark" style="width: 100%;">
+                <tr>
+                    <th colspan="3" style="text-align: center;">Notas</th>
+                </tr>
+                <tr>
+                    <th id="t1">Unidad (%)</th>
+                    <th id="t2">Nota 1 (%)</th>
+                    <th id="t3">Nota 2 (%)</th>
+                </tr>
+                <tr>
+                    <td>Unidad 1 (33%):</td>
+                    <td>
+                        <input type="number" id="1" name="nota_1">
+                    </td>
+                    <td>
+                        <input type="number" id="2" name="nota_2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Unidad 2 (33%):</td>
+                    <td>
+                        <input type="number" id="3" name="nota_3">
+                    </td>
+                    <td>
+                        <input type="number" id="4" name="nota_4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Unidad 3 (34%):</td>
+                    <td>
+                        <input type="number" id="5" name="nota_5">
+                    </td>
+                    <td>
+                        <input type="number" id="6" name="nota_6">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="boton" colspan="3">
+                        <input class="btn btn-primary btn-block" type="reset" value="Borrar" class="botonpulento" style="background-color: lightgray; border-color:black ; color: black;" />
+                        <input class="btn btn-primary btn-block" type="submit" onclick="Promedio()" value="Enviar" class="botonpulento" style="background-color: lightgray; border-color:black; color: black" />
+                    </td>
+                </tr>
+                <p id="promedio"></p>
+            </table>
+        </div>
+        <input type="hidden" name="promedio" id="promedio_input">
+    </form>
+</body>
+<script src="./assets/js/scripts.js"></script>
+</html>
+
+</html>

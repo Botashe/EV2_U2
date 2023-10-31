@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+    color:  white;
+    padding: 10px;
+    background-color:maroon;
+}
+
+.table table-dark{
+    width: 80%;
+    height: 80%;
+}
+
+.cuerpo {
+    background-color:  lightgray;    
+}
+
+input {
+    background-color: white;
+    color: #000000;
+}
+
+.boton{
+    text-align: center;
+}
+.botonpulento{
+    margin: 5px;
+}
