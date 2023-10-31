@@ -10,6 +10,54 @@
 </head>
 
 <body class="cuerpo">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img id="img_1" src="./assets/imagenes/logo_cft_estatal.jpeg" alt="logo_cft" width="100">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="https://cftestatalaricayparinacota.cl"><strong>Inicio</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cftestatalaricayparinacota.cl/admision-2/">Admisión</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="true">
+                            Carreras
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-informatica-y-aplicaciones-tecnologicas/">TNS
+                                    en Informática</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-proyectos-electricos-de-distribucion/">TNS
+                                    de Proyectos Eléctricos de Distribución</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-fabricacion-y-montaje-de-estructuras-metalicas/">TNS
+                                    en Fabricación y Montaje de Estructuras Metálicas</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tns-en-obras-civiles/">TNS en Obras
+                                    Civiles</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Contáctanos</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busca tu carrera" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
     <h1>Calculadora Promedio</h1> <br>
     <div class="row" style="padding: 25px 50px 75px 100px;">
         <div class="col">
@@ -59,8 +107,11 @@
                 </tr>
                 <tr>
                     <td class="boton" colspan="3">
-                        <input class="btn btn-primary btn-block" type="reset" value="Borrar" class="botonpulento" style="background-color: lightgray; border-color:black ; color: black;" />
-                        <input class="btn btn-primary btn-block" type="submit" onclick="Promedio()" value="Enviar" class="botonpulento" style="background-color: lightgray; border-color:black; color: black" />
+                        <input class="btn btn-primary btn-block" type="reset" value="Borrar" class="botonpulento"
+                            style="background-color: lightgray; border-color:black ; color: black;" />
+                        <input class="btn btn-primary btn-block" type="submit" onclick="Promedio()" value="Enviar"
+                            class="botonpulento"
+                            style="background-color: lightgray; border-color:black; color: black" />
                     </td>
                 </tr>
                 <p id="promedio"></p>
@@ -70,6 +121,7 @@
     </form>
 </body>
 <script src="./assets/js/scripts.js"></script>
+
 </html>
 
 </html>
