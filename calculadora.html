@@ -63,7 +63,7 @@
                         <a class="nav-link disabled" aria-disabled="true">Contáctanos</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
+                <form class="d-flex" role="search" method="post">
                     <input class="form-control me-2" type="search" placeholder="Busca tu carrera" aria-label="Search">
                     <button class="btn btn-outline-danger" type="submit">Buscar</button>
                 </form>
@@ -71,7 +71,7 @@
         </div>
     </nav>
 
-    <h2>Calculadora Promedio</h2> <br>
+    <h1>Calculadora Promedio</h1> <br>
     <form action="./resultado.html" method="get" onsubmit="return validarFormulario()">
         <div class="mx-auto" style="max-width: 70%;">
             <div class="col">
@@ -95,28 +95,28 @@
                     <tr>
                         <td>Unidad 1 (33%):</td>
                         <td>
-                            <input type="number" id="1" name="nota_1" placeholder="12%" max="7">
+                            <input type="text" id="1" name="nota_1" placeholder="12%" max="7">
                         </td>
                         <td>
-                            <input type="number" id="2" name="nota_2" placeholder="21%">
+                            <input type="text" id="2" name="nota_2" placeholder="21%">
                         </td>
                     </tr>
                     <tr>
                         <td>Unidad 2 (33%):</td>
                         <td>
-                            <input type="number" id="3" name="nota_3" placeholder="12%">
+                            <input type="text" id="3" name="nota_3" placeholder="12%">
                         </td>
                         <td>
-                            <input type="number" id="4" name="nota_4" placeholder="21%">
+                            <input type="text" id="4" name="nota_4" placeholder="21%">
                         </td>
                     </tr>
                     <tr>
                         <td>Unidad 3 (34%):</td>
                         <td>
-                            <input type="number" id="5" name="nota_5" placeholder="13%">
+                            <input type="text" id="5" name="nota_5" placeholder="13%">
                         </td>
                         <td>
-                            <input type="number" id="6" name="nota_6" placeholder="21%">
+                            <input type="text" id="6" name="nota_6" placeholder="21%">
                         </td>
                     </tr>
                     <tr>
@@ -133,7 +133,7 @@
         </div>
     </form>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/scripts.calculadora.js"></script>
 </body>
 
 </html>

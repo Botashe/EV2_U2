@@ -28,7 +28,7 @@ function Promedio() {
     }
     else {
         let promedio = ((nota1 * 0.12 + nota2 * 0.21) + (nota3 * 0.12 + nota4 * 0.21) + (nota5 * 0.13 + nota6 * 0.21)) / (0.33 + 0.33 + 0.34);
-        let resultadoURL = `./resultado.html?nombre=${nombre}&modulo=${modulo}&promedio=${promedio}`;
+        let resultadoURL = `./resultado.html?nombre=${nombre}&modulo=${modulo}&nota_1=${nota1}&nota_2=${nota2}&nota_3=${nota3}&nota_4=${nota4}&nota_5=${nota5}&nota_6=${nota6}&promedio=${promedio}`;
 
         window.location.href = resultadoURL;
     }
@@ -51,7 +51,6 @@ function validarFormulario() {
         return false;
     }
     else if (nota1 > 7 || nota2 > 7 || nota3 > 7 || nota4 > 7 || nota5 > 7 || nota6 > 7) {
-        alert("Las notas no pueden ser mayores que 7. Por favor, ingresa notas válidas.");
         return false;
     }
 

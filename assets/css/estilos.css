@@ -1,17 +1,17 @@
-h2 {
+h1 {
     text-align: center;
-    color:  white;
+    color: white;
     padding: 10px;
-    background-color:maroon;
+    background-color: maroon;
 }
 
-.table table-dark{
+.table table-dark {
     width: 80%;
     height: 80%;
 }
 
 .cuerpo {
-    background-color:  lightgray;    
+    background-color: lightgray;
 }
 
 input {
@@ -19,9 +19,10 @@ input {
     color: #000000;
 }
 
-.boton{
+.boton {
     text-align: center;
 }
-.botonpulento{
+
+.botonpulento {
     margin: 5px;
 }

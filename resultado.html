@@ -63,18 +63,18 @@
                         <a class="nav-link disabled" aria-disabled="true">Contáctanos</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
+                <form class="d-flex" role="search" method="post">
                     <input class="form-control me-2" type="search" placeholder="Busca tu carrera" aria-label="Search">
                     <button class="btn btn-outline-danger" type="submit">Buscar</button>
                 </form>
             </div>
         </div>
     </nav>
-    <h2>Resultado</h2> <br>
+    <h1>Resultado</h1> <br>
 
-    <table class="mx-auto table table-dark table-bordered border-light" class="mx-auto" style="width: 50%;">
+    <table class="mx-auto table table-dark table-bordered border-light" class="mx-auto" style="width: 45%;">
         <tr>
-            <th colspan=" 2" style="text-align: center;">Resultados</th>
+            <th colspan=" 2" style="text-align: center;">Datos Personales</th>
         </tr>
         <tr>
             <td>Nombre:</td>
@@ -83,6 +83,42 @@
         <tr>
             <td>Modulo:</td>
             <td><span id="modulo"></span></td>
+        </tr>
+        <tr>
+            <th colspan="2" style="text-align: center;">Unidad 1 (33%)</th>
+        </tr>
+        <tr>
+            <td>Nota 1 (12%)</td>
+            <td><span id="nota_1"></span></td>
+        </tr>
+        <tr>
+            <td>Nota 2 (21%)</td>
+            <td><span id="nota_2"></span></td>
+        </tr>
+        <tr>
+            <th colspan="2" style="text-align: center;">Unidad 2 (33%)</th>
+        </tr>
+        <tr>
+            <td>Nota 3 (12%)</td>
+            <td><span id="nota_3"></span></td>
+        </tr>
+        <tr>
+            <td>Nota 4 (21%)</td>
+            <td><span id="nota_4"></span></td>
+        </tr>
+        <tr>
+            <th colspan="2" style="text-align: center;">Unidad 3 (34%)</th>
+        </tr>
+        <tr>
+            <td>Nota 5 (13%)</td>
+            <td><span id="nota_5"></span></td>
+        </tr>
+        <tr>
+            <td>Nota 6 (21%)</td>
+            <td><span id="nota_6"></span></td>
+        </tr>
+        <tr>
+            <th colspan="2" style="text-align: center;">Resultado Final</th>
         </tr>
         <tr>
             <td>Promedio final:</td>
@@ -95,33 +131,7 @@
     </table>
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const nombre = urlParams.get('nombre');
-        const modulo = urlParams.get('modulo');
-        const nota_1 = parseFloat(urlParams.get('nota_1'));
-        const nota_2 = parseFloat(urlParams.get('nota_2'));
-        const nota_3 = parseFloat(urlParams.get('nota_3'));
-        const nota_4 = parseFloat(urlParams.get('nota_4'));
-        const nota_5 = parseFloat(urlParams.get('nota_5'));
-        const nota_6 = parseFloat(urlParams.get('nota_6'));
-        const promedio = parseFloat(urlParams.get('promedio'));
-
-        if (!isNaN(nota_1) && !isNaN(nota_2) && !isNaN(nota_3) && !isNaN(nota_4) && !isNaN(nota_5) && !isNaN(nota_6)) {
-            const promedio = ((nota_1 * 0.12 + nota_2 * 0.21) + (nota_3 * 0.12 + nota_4 * 0.21) + (nota_5 * 0.13 + nota_6 * 0.21)) / (0.33 + 0.33 + 0.34);
-            document.getElementById('nombre').textContent = nombre;
-            document.getElementById('modulo').textContent = modulo;
-            document.getElementById('promedio').textContent = promedio.toFixed(2);
-
-            if (promedio >= 4) {
-                document.getElementById('mensaje').textContent = '¡Aprobado!';
-            } else {
-                document.getElementById('mensaje').textContent = '¡Reprobado!';
-            }
-        } else {
-            document.getElementById('promedio').textContent = 'No se pudo calcular el promedio debido a datos faltantes o inválidos.';
-        }
-    </script>
+    <script src="./assets/js/scripts.resultado.js"></script>
 </body>
 
 </html>
