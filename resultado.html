@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+</head>
+
+<body class="cuerpo">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <img id="img_1" src="./assets/imagenes/logo_cft_estatal.jpeg" alt="logo_cft" width="100">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="https://cftestatalaricayparinacota.cl"><strong>Inicio</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://cftestatalaricayparinacota.cl/admision-2/">Admisión</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="true">
+                            Carreras
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-informatica-y-aplicaciones-tecnologicas/">
+                                    TNS en Informática
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-proyectos-electricos-de-distribucion/">
+                                    TNS de Proyectos Eléctricos de Distribución
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-fabricacion-y-montaje-de-estructuras-metalicas/">
+                                    TNS en Fabricación y Montaje de Estructuras Metálicas
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tns-en-obras-civiles/">
+                                    TNS en Obras Civiles
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Contáctanos</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busca tu carrera" aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <h2>Resultado</h2> <br>
+
+    <table class="mx-auto table table-dark table-bordered border-light" class="mx-auto" style="width: 50%;">
+        <tr>
+            <th colspan=" 2" style="text-align: center;">Resultados</th>
+        </tr>
+        <tr>
+            <td>Nombre:</td>
+            <td><span id="nombre"></span></td>
+        </tr>
+        <tr>
+            <td>Modulo:</td>
+            <td><span id="modulo"></span></td>
+        </tr>
+        <tr>
+            <td>Promedio final:</td>
+            <td><span id="promedio"></span></td>
+        </tr>
+        <tr>
+            <td>Resultado:</td>
+            <td><span id="mensaje"></span></td>
+        </tr>
+    </table>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('nombre');
+        const modulo = urlParams.get('modulo');
+        const nota_1 = parseFloat(urlParams.get('nota_1'));
+        const nota_2 = parseFloat(urlParams.get('nota_2'));
+        const nota_3 = parseFloat(urlParams.get('nota_3'));
+        const nota_4 = parseFloat(urlParams.get('nota_4'));
+        const nota_5 = parseFloat(urlParams.get('nota_5'));
+        const nota_6 = parseFloat(urlParams.get('nota_6'));
+        const promedio = parseFloat(urlParams.get('promedio'));
+
+        if (!isNaN(nota_1) && !isNaN(nota_2) && !isNaN(nota_3) && !isNaN(nota_4) && !isNaN(nota_5) && !isNaN(nota_6)) {
+            const promedio = ((nota_1 * 0.12 + nota_2 * 0.21) + (nota_3 * 0.12 + nota_4 * 0.21) + (nota_5 * 0.13 + nota_6 * 0.21)) / (0.33 + 0.33 + 0.34);
+            document.getElementById('nombre').textContent = nombre;
+            document.getElementById('modulo').textContent = modulo;
+            document.getElementById('promedio').textContent = promedio.toFixed(2);
+
+            if (promedio >= 4) {
+                document.getElementById('mensaje').textContent = '¡Aprobado!';
+            } else {
+                document.getElementById('mensaje').textContent = '¡Reprobado!';
+            }
+        } else {
+            document.getElementById('promedio').textContent = 'No se pudo calcular el promedio debido a datos faltantes o inválidos.';
+        }
+    </script>
+</body>
+
+</html>

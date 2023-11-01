@@ -10,7 +10,7 @@
 </head>
 
 <body class="cuerpo">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"" style="background-color:black">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <img id="img_1" src="./assets/imagenes/logo_cft_estatal.jpeg" alt="logo_cft" width="100">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -25,7 +25,7 @@
                             href="https://cftestatalaricayparinacota.cl"><strong>Inicio</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://cftestatalaricayparinacota.cl/admision-2/">Admisión</a>
+                        <a class="nav-link active" href="https://cftestatalaricayparinacota.cl/admision-2/">Admisión</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -33,18 +33,30 @@
                             Carreras
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item"
-                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-informatica-y-aplicaciones-tecnologicas/">TNS
-                                    en Informática</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-proyectos-electricos-de-distribucion/">TNS
-                                    de Proyectos Eléctricos de Distribución</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-fabricacion-y-montaje-de-estructuras-metalicas/">TNS
-                                    en Fabricación y Montaje de Estructuras Metálicas</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://cftestatalaricayparinacota.cl/tns-en-obras-civiles/">TNS en Obras
-                                    Civiles</a></li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-informatica-y-aplicaciones-tecnologicas/">
+                                    TNS en Informática
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-proyectos-electricos-de-distribucion/">
+                                    TNS de Proyectos Eléctricos de Distribución
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tecnico-de-nivel-superior-en-fabricacion-y-montaje-de-estructuras-metalicas/">
+                                    TNS en Fabricación y Montaje de Estructuras Metálicas
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://cftestatalaricayparinacota.cl/tns-en-obras-civiles/">
+                                    TNS en Obras Civiles
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -53,23 +65,23 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Busca tu carrera" aria-label="Search">
-                    <button class= "btn btn-light" type="submit">Buscar</button>
+                    <button class="btn btn-outline-danger" type="submit">Buscar</button>
                 </form>
             </div>
         </div>
-    </nav><br>
-    <h2>Calculadora Promedio</h2> <br> <br>
-    <div class="mx-auto" style="max-width: 400px;">
-        <div class="col">
-            <input type="text" class="form-control" name="nombre" placeholder="Nombre" aria-label="Nombre">
-        </div> <br>
-        <div class="col">
-            <input type="text" class="form-control" name="modulo" placeholder="Modulo" aria-label="Modulo">
+    </nav>
+
+    <h2>Calculadora Promedio</h2> <br>
+    <form action="./resultado.html" method="get" onsubmit="return validarFormulario()">
+        <div class="mx-auto" style="max-width: 70%;">
+            <div class="col">
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre" aria-label="Nombre">
+            </div> <br>
+            <div class="col">
+                <input type="text" class="form-control" name="modulo" placeholder="Modulo" aria-label="Modulo">
+            </div> <br>
         </div>
-    </div>
-    </div>
-    <form action="index2.html" method="post">
-        <div class="position-absolute top-50 start-50 translate-middle-x">
+        <div class="mx-auto" style="max-width: 70%;">
             <table class="table table-dark" style="width: 100%;">
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <tr>
@@ -83,28 +95,28 @@
                     <tr>
                         <td>Unidad 1 (33%):</td>
                         <td>
-                            <input type="number" id="1" name="nota_1">
+                            <input type="number" id="1" name="nota_1" placeholder="12%" max="7">
                         </td>
                         <td>
-                            <input type="number" id="2" name="nota_2">
+                            <input type="number" id="2" name="nota_2" placeholder="21%">
                         </td>
                     </tr>
                     <tr>
                         <td>Unidad 2 (33%):</td>
                         <td>
-                            <input type="number" id="3" name="nota_3">
+                            <input type="number" id="3" name="nota_3" placeholder="12%">
                         </td>
                         <td>
-                            <input type="number" id="4" name="nota_4">
+                            <input type="number" id="4" name="nota_4" placeholder="21%">
                         </td>
                     </tr>
                     <tr>
                         <td>Unidad 3 (34%):</td>
                         <td>
-                            <input type="number" id="5" name="nota_5">
+                            <input type="number" id="5" name="nota_5" placeholder="13%">
                         </td>
                         <td>
-                            <input type="number" id="6" name="nota_6">
+                            <input type="number" id="6" name="nota_6" placeholder="21%">
                         </td>
                     </tr>
                     <tr>
@@ -116,16 +128,12 @@
                                 style="background-color: lightgray; border-color:black; color: black" />
                         </td>
                     </tr>
-                    <p id="promedio"></p>
                 </div>
             </table>
         </div>
-        <input type="hidden" name="promedio" id="promedio_input">
     </form>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
 </body>
-<script src="./assets/js/scripts.js"></script>
-<script src="./assets/js/bootstrap.bundle.min.js"></script>
-
-</html>
 
 </html>
